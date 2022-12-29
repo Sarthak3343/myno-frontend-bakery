@@ -108,6 +108,7 @@ const BakeryHomePage = () => {
           <button onClick={handleCheckout} className="button-checkout">
             Checkout
           </button>
+          <h4>cartTotal : {cartTotal}</h4>
         </div>
       </div>
     </BrowserRouter>
