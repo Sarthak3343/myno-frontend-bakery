@@ -52,8 +52,9 @@ const BakeryHomePage = () => {
 
   const deleteFromCart = (id) => {
     const product = products.find((product) => product.id === id);
+    const cartPresent = cart.find((product) => product.id === id);
     setCart(cart.filter((product) => product.id !== id));
-    if(cartTotal - product.price >= 0) setCartTotal(cartTotal - product.price);
+    if(cartPresent && cartTotal - product.price >= 0) setCartTotal(cartTotal - product.price);
   };
 
   const handleCheckout = () => {
